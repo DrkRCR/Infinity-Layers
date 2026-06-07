@@ -1,73 +1,52 @@
-# React + TypeScript + Vite
+# Infinity Layers 3D Printing
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the official frontend repository for **Infinity Layers**, a premium 3D printing service specializing in rapid prototyping, batch manufacturing, and high-quality FDM prints.
 
-Currently, two official plugins are available:
+## Overview
+This is a modern, responsive static landing page built with React, Vite, and TypeScript. It features a premium glassmorphic design system and a dynamic materials showcase.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A key feature of this site is the **direct-to-WhatsApp order routing**, which bypasses the need for a complex backend by formatting the user's order details and launching WhatsApp instantly for order submission.
 
-## React Compiler
+## Tech Stack
+- **Framework**: React 19 + TypeScript
+- **Bundler**: Vite
+- **Styling**: Custom CSS (Glassmorphism & Dark Mode Aesthetic)
+- **Icons**: Lucide React
+- **Deployment**: GitHub Pages (`gh-pages`)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Development
 
-## Expanding the ESLint configuration
+To run this project locally:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/DrkRCR/Infinity-Layers.git
+   cd Infinity-Layers
+   ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Deployment
+
+This site is configured to deploy automatically to GitHub Pages. To push an update to the live site, simply run:
+
+```bash
+npm run deploy
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+This will build the production bundle and push it to the `gh-pages` branch.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Current Features
+- Premium Hero section with animated glass-cards.
+- Dynamic "Colors & Materials" grid sorted by filament type (PLA+, PLA, PETG, TPU).
+- Integrated Quote/Order form that pre-fills a WhatsApp message directly to the business.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+*Established January 18th, 2025.*
